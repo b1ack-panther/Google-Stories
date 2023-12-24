@@ -1,0 +1,131 @@
+body {
+	font-family: "helvetica now text";
+	padding: 0;
+	margin: 0;
+}
+
+.hero-container {
+	.hero-text-section {
+		max-width: 18em;
+		padding: min(18vh, 18vw) 0 min(25vh, 25vw);
+		width: calc(100% - 32px);
+		margin: 0 auto;
+		font-size: max(1rem, 3vw);
+		font-weight: 600;
+		text-align: center;
+		&:last-child{
+			padding-bottom: 400px;
+		}
+		h1 {
+			display: inline-block;
+		}
+	}
+
+	.hero-collage {
+		display: grid;
+		grid-template-columns: 35% 1fr 35%;
+		max-width: 95%;
+		margin: 0 auto 10vh;
+
+		.left-column,
+		.right-column {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(6, 1fr);
+			column-gap: 20px;
+			height: 400px;
+		}
+
+		.left-column {
+			grid-area: 1/1 / span 1 / span 1;
+			.hero-element {
+				grid-area: 1/2 / span 5 / span 1;
+				&:first-child {
+					grid-area: 2/1 / span 5 / span 1;
+				}
+				&:last-child {
+					grid-area: 2/3 / span 5 / span 1;
+				}
+			}
+		}
+
+		.right-column {
+			grid-area: 1/3 / span 1 / span 1;
+			.hero-element {
+				grid-area: 1/2 / span 5 / span 1;
+				&:first-child {
+					grid-area: 2/1 / span 5 / span 1;
+				}
+				&:last-child {
+					grid-area: 2/3 / span 5 / span 1;
+				}
+			}
+		}
+
+		.hero-element {
+			overflow: hidden;
+			border-radius: 20px;
+			img,
+			video {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.hero-media {
+		position: relative;
+		height: 764px;
+	}
+
+	.hero-phone-block {
+		position: absolute;
+		width: 290px;
+		height: 650px;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%);
+		.hero-phone-template {
+			background-position: center;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 90%;
+			border-radius: 30px;
+			video {
+				// display: none;
+				box-sizing: border-box;
+				position: absolute;
+				width: 100%;
+				height: 88%;
+				padding: 4px;
+				top: 3px;
+				// left: 3%;
+				border-radius: 30px;
+				overflow: hidden;
+			}
+		}
+	}
+	.hero-usedBy {
+		color: white;
+		display: flex;
+		gap: 30%;
+		justify-content: flex-start;
+		align-items: center;
+		padding-top: 234px;
+		margin: 234px auto 300px;
+		max-width: 1304px;
+		width: calc(100% - 48px);
+		position: relative;
+
+		.hero-usedBy-copy {
+			margin-bottom: 0px;
+			padding-left: 52px;
+			width: 390px;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1.4;
+		}
+	}
+}

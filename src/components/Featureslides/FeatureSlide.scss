@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.feature-slides-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+	background-color: black;
+	color: white;
+
+  .feature-slide {
+    height: 100vh;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .feature-slide-title {
+      font-size: 6vw;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 1.2;
+      font-family: "Fugaz One", cursive;
+    }
+
+    .feature-slide-description {
+      font-size: 1.2rem;
+      margin-top: 30px;
+      line-height: 1.2;
+    }
+  }
+
+  .feature-slides-right {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+		border-radius: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transform: scale(1.2);
+    position: absolute;
+    top: 0;
+
+    &.as-primary {
+      opacity: 1;
+      transform: scale(1.1);
+    transition: opacity 0.5s ease-in-out;
+    }
+  }
+}
+
+.footer {
+  height: 90vh;
+  background-color: #000000;
+  display: flex;
+  align-items: flex-end;
+  padding: 10vh;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
