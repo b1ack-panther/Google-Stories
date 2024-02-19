@@ -21,17 +21,19 @@ export default function HeroPhoneBlock() {
 				delay: 1,
 				scrollTrigger: {
 					trigger: phoneRef.current,
-					start: "top top",
-					end: "+=1000",
+					start: "top 10%",
+					end: "+=1200",
 					pin: true,
 					scrub: true,
 					pinSpacing: false,
 				},
 			});
-			tl.to(phoneRef.current, { scale: 0.8 }, "+=0.2")
-			tl.to(document.querySelector(".hero-container"), { backgroundColor: "black", duration: 0.25 }, "-=0.5");
-			
-
+			tl.to(phoneRef.current, { scale: 0.8 }, "+=0.2");
+			tl.to(
+				document.querySelector(".hero-container"),
+				{ backgroundColor: "black", duration: 0.25 },
+				"-=0.5"
+			);
 		}, phoneRef);
 
 		return () => ctx.revert();

@@ -13,7 +13,7 @@ body {
 		font-size: max(1rem, 3vw);
 		font-weight: 600;
 		text-align: center;
-		&:last-child{
+		&:last-child {
 			padding-bottom: 400px;
 		}
 		h1 {
@@ -76,13 +76,14 @@ body {
 
 	.hero-media {
 		position: relative;
-		height: 764px;
+		height: 1000px;
 	}
 
 	.hero-phone-block {
 		position: absolute;
-		width: 290px;
-		height: 650px;
+		width: 40vw;
+		max-width: 350px;
+		aspect-ratio: 1/2.24;
 		top: 0;
 		left: 50%;
 		transform: translate(-50%);
